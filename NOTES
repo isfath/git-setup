@@ -1,0 +1,17 @@
+git config -e --global #nom
+ssh-keygen #ok sous Windows 10 !
+type .ssh\id_rsa.pub
+deploy key doit être unique
+	https://stackoverflow.com/a/11251797
+	configurer un hôte par app dans .ssh/config
+	clone git@app:isfath/app.git
+	automatiser ça ?
+
+core.autocrlf=false : rien changer (par défaut sous GNU/Linux)
+core.autocrlf=true : normalise et checkout avec CRLF (Windows)
+core.autocrlf=input : normalise seulement (GNU/Linux)
+https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/
+	explique bien les détails
+stocker normalisé, sinon c'est binaire et pas de diff : aucun intérêt
+renormalize pourrit le diff mais on peut faire git blame ignore-revs
+préciser ça dans .gitattributes
