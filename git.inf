@@ -1,0 +1,23 @@
+[Setup]
+Lang=default
+Dir=C:\Program Files\Git
+Group=Git
+NoIcons=0
+SetupType=default
+Components=gitlfs,assoc,assoc_sh
+Tasks=
+EditorOption=Notepad
+CustomEditorPath=
+DefaultBranchOption=master
+PathOption=Cmd
+SSHOption=ExternalOpenSSH
+TortoiseOption=false
+CURLOption=WinSSL
+CRLFOption=CRLFAlways
+BashTerminalOption=ConHost
+GitPullBehaviorOption=Merge
+UseCredentialManager=Core
+PerformanceTweaksFSCache=Enabled
+EnableSymlinks=Disabled
+EnablePseudoConsoleSupport=Disabled
+EnableFSMonitor=Disabled
