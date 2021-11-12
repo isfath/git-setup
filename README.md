@@ -4,10 +4,23 @@
 
 ## Installation
 
+### Manuelle
 1. Téléchargez Git depuis le [site officiel](https://git-scm.com/download/win)
 1. Déplacez l'exécutable dans ce dossier
 1. Adaptez le nom de l'exécutable dans `setup.bat`
 1. Lancez le batch
+
+### Automatisée
+Dans AD, les GPO permettent de configurer les postes de manière centralisée :
+1. Un MSI est automatiquement installé, mis à jour et désinstallé.
+   Malheureusement, Git n'est pas distribué sous cette forme.
+   Le wrapper le plus connu (MSI Wrapper) est payant.
+2. Une _tâche immédiate_ exécutée une seule fois peut lancer une installation
+   silencieuse (reprendre le contenu de [setup.bat](setup.bat)).
+   Les fichiers sont stockés dans le même dossier que la _Policy_
+   (qu'on retrouve en triant les dossiers par date de dernière modification) et
+   référencés via un UNC.
+   L'inconvénient, c'est que la désinstallation est manuelle.
 
 ## Configuration utilisateur
 
